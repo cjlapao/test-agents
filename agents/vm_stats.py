@@ -1,4 +1,4 @@
-from parallels.core.types import ParallelsAIAgent, Result
+from core.types import ParallelsAIAgent, Result
 
 
 class VMStatsAgent(ParallelsAIAgent):

@@ -1,7 +1,7 @@
 from core.types import ParallelsAIAgent, Result
 
 
-class VMStatsAgent(ParallelsAIAgent):
+class VMListAgent(ParallelsAIAgent):
     def __init__(self):
         super().__init__(
             name="VM List Agent",

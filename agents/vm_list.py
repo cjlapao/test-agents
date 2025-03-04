@@ -1,7 +1,7 @@
-from core.types import ParallelsAIAgent, Result
+from pd_ai_agent_core.core_types import LlmChatAgent, LlmChatResult
 
 
-class VMListAgent(ParallelsAIAgent):
+class VMListAgent(LlmChatAgent):
     def __init__(self):
         super().__init__(
             name="VM List Agent",
@@ -9,10 +9,10 @@ class VMListAgent(ParallelsAIAgent):
             functions=[self.get_vm_list],
         )
 
-    def get_vm_list(self) -> Result:
+    def get_vm_list(self) -> LlmChatResult:
         """Get a list of virtual machines or a specific virtual machine"""
         # This is just a mock implementation
-        return Result(
+        return LlmChatResult(
             value="""
             [
               {
@@ -32,10 +32,10 @@ class VMListAgent(ParallelsAIAgent):
             """,
         )
 
-    def get_vm_performance(self, vm_id: str) -> Result:
+    def get_vm_performance(self, vm_id: str) -> LlmChatResult:
         """Get performance metrics for a VM"""
         # This is just a mock implementation
-        return Result(
+        return LlmChatResult(
             value=f"""
             {
                 "id": "1",
